@@ -37,7 +37,7 @@ public class XPWebView: UIWebView {
     var currentUrl:NSURL?
     var interactive:Bool! = false
     var webViewProxyDelegate:WebViewProxyDelegate?
-    @IBInspectable var remoteUrl:String?{
+    @IBInspectable public var remoteUrl:String?{
         willSet(newremoteUrl) {
             let urlEncode = newremoteUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let url = NSURL(string:urlEncode!)
