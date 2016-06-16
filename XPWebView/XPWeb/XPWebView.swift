@@ -2,9 +2,27 @@
 //  XPWebView.swift
 //  XPWebViewTest
 //
-//  Created by jy on 16/6/6.
-//  Copyright © 2016年 jy. All rights reserved.
+//  The MIT License (MIT)
 //
+//  Copyright (c) 2014 - 2015 Fabrizio Brancati. All rights reserved.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 import UIKit
 
@@ -37,7 +55,7 @@ public class XPWebView: UIWebView {
     var currentUrl:NSURL?
     var interactive:Bool! = false
     var webViewProxyDelegate:WebViewProxyDelegate?
-    @IBInspectable public var remoteUrl:String?{
+    public var remoteUrl:String?{
         willSet(newremoteUrl) {
             let urlEncode = newremoteUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let url = NSURL(string:urlEncode!)
@@ -46,10 +64,7 @@ public class XPWebView: UIWebView {
             sourceLabel = UILabel(frame: CGRect(x: 0, y: 10, width: UIScreen.mainScreen().bounds.size.width, height: 15))
             let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: false)
             let item = components?.host
-            if item == nil {
-                print("url格式不正确")
-                return
-            }
+            assert(item == nil,"remoteUrl格式不正确")
             sourceLabel?.text = ("网页由 \((url!.host)!) 提供")
             sourceLabel?.font = UIFont.systemFontOfSize(12)
             sourceLabel?.textColor = UIColor.whiteColor()
@@ -124,14 +139,6 @@ public class XPWebView: UIWebView {
     }
     
     func updateProgressFrame() {
-        if (self.belongViewController()?.navigationController == nil){
-            progressView?.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 2)
-            return
-        }
-        if self.belongViewController()?.navigationController?.navigationBarHidden == true {
-            progressView?.frame = CGRectMake(0, 20, UIScreen.mainScreen().bounds.size.width, 2)
-            return
-        }
         if self.belongViewController()?.automaticallyAdjustsScrollViewInsets == true {
             progressView?.frame = CGRectMake(0, 64, UIScreen.mainScreen().bounds.size.width, 2)
         }else{
@@ -151,7 +158,7 @@ extension XPWebView{
 }
 
 extension XPWebView:UIWebViewDelegate{
-     public func webViewDidStartLoad(webView: UIWebView) {
+    public func webViewDidStartLoad(webView: UIWebView) {
         if (webViewProxyDelegate != nil) && (webViewProxyDelegate?.webViewDidStartLoad!(webView) != nil) {
             webViewProxyDelegate?.webViewDidStartLoad!(webView)
         }

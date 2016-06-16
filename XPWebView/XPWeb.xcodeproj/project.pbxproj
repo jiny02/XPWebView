@@ -7,179 +7,183 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AFB36171D0FE24B00B58EFD /* XPWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFB360C1D0FE24B00B58EFD /* XPWebView.framework */; };
-		0AFB361C1D0FE24B00B58EFD /* XPWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB361B1D0FE24B00B58EFD /* XPWebViewTests.swift */; };
-		0AFB36291D0FE29400B58EFD /* XPWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36281D0FE29400B58EFD /* XPWebView.swift */; };
+		0ACE34A01D11571B00A9BB82 /* XPWeb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ACE349F1D11571B00A9BB82 /* XPWeb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ACE34A71D11571C00A9BB82 /* XPWeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACE349C1D11571B00A9BB82 /* XPWeb.framework */; };
+		0ACE34AC1D11571C00A9BB82 /* XPWebTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE34AB1D11571C00A9BB82 /* XPWebTests.swift */; };
+		0ACE34B71D11573F00A9BB82 /* XPWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE34B61D11573F00A9BB82 /* XPWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0AFB36181D0FE24B00B58EFD /* PBXContainerItemProxy */ = {
+		0ACE34A81D11571C00A9BB82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0AFB36031D0FE24B00B58EFD /* Project object */;
+			containerPortal = 0ACE34931D11571B00A9BB82 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0AFB360B1D0FE24B00B58EFD;
-			remoteInfo = XPWebView;
+			remoteGlobalIDString = 0ACE349B1D11571B00A9BB82;
+			remoteInfo = XPWeb;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AFB360C1D0FE24B00B58EFD /* XPWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AFB36111D0FE24B00B58EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AFB36161D0FE24B00B58EFD /* XPWebViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPWebViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AFB361B1D0FE24B00B58EFD /* XPWebViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPWebViewTests.swift; sourceTree = "<group>"; };
-		0AFB361D1D0FE24B00B58EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AFB36281D0FE29400B58EFD /* XPWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPWebView.swift; sourceTree = "<group>"; };
+		0ACE349C1D11571B00A9BB82 /* XPWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACE349F1D11571B00A9BB82 /* XPWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPWeb.h; sourceTree = "<group>"; };
+		0ACE34A11D11571B00A9BB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ACE34A61D11571C00A9BB82 /* XPWebTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPWebTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACE34AB1D11571C00A9BB82 /* XPWebTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPWebTests.swift; sourceTree = "<group>"; };
+		0ACE34AD1D11571C00A9BB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ACE34B61D11573F00A9BB82 /* XPWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0AFB36081D0FE24B00B58EFD /* Frameworks */ = {
+		0ACE34981D11571B00A9BB82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AFB36131D0FE24B00B58EFD /* Frameworks */ = {
+		0ACE34A31D11571C00A9BB82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFB36171D0FE24B00B58EFD /* XPWebView.framework in Frameworks */,
+				0ACE34A71D11571C00A9BB82 /* XPWeb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AFB36021D0FE24B00B58EFD = {
+		0ACE34921D11571B00A9BB82 = {
 			isa = PBXGroup;
 			children = (
-				0AFB360E1D0FE24B00B58EFD /* XPWebView */,
-				0AFB361A1D0FE24B00B58EFD /* XPWebViewTests */,
-				0AFB360D1D0FE24B00B58EFD /* Products */,
+				0ACE349E1D11571B00A9BB82 /* XPWeb */,
+				0ACE34AA1D11571C00A9BB82 /* XPWebTests */,
+				0ACE349D1D11571B00A9BB82 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0AFB360D1D0FE24B00B58EFD /* Products */ = {
+		0ACE349D1D11571B00A9BB82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AFB360C1D0FE24B00B58EFD /* XPWebView.framework */,
-				0AFB36161D0FE24B00B58EFD /* XPWebViewTests.xctest */,
+				0ACE349C1D11571B00A9BB82 /* XPWeb.framework */,
+				0ACE34A61D11571C00A9BB82 /* XPWebTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0AFB360E1D0FE24B00B58EFD /* XPWebView */ = {
+		0ACE349E1D11571B00A9BB82 /* XPWeb */ = {
 			isa = PBXGroup;
 			children = (
-				0AFB36281D0FE29400B58EFD /* XPWebView.swift */,
-				0AFB36111D0FE24B00B58EFD /* Info.plist */,
+				0ACE349F1D11571B00A9BB82 /* XPWeb.h */,
+				0ACE34B61D11573F00A9BB82 /* XPWebView.swift */,
+				0ACE34A11D11571B00A9BB82 /* Info.plist */,
 			);
-			path = XPWebView;
+			path = XPWeb;
 			sourceTree = "<group>";
 		};
-		0AFB361A1D0FE24B00B58EFD /* XPWebViewTests */ = {
+		0ACE34AA1D11571C00A9BB82 /* XPWebTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AFB361B1D0FE24B00B58EFD /* XPWebViewTests.swift */,
-				0AFB361D1D0FE24B00B58EFD /* Info.plist */,
+				0ACE34AB1D11571C00A9BB82 /* XPWebTests.swift */,
+				0ACE34AD1D11571C00A9BB82 /* Info.plist */,
 			);
-			path = XPWebViewTests;
+			path = XPWebTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0AFB36091D0FE24B00B58EFD /* Headers */ = {
+		0ACE34991D11571B00A9BB82 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACE34A01D11571B00A9BB82 /* XPWeb.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0AFB360B1D0FE24B00B58EFD /* XPWebView */ = {
+		0ACE349B1D11571B00A9BB82 /* XPWeb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AFB36201D0FE24B00B58EFD /* Build configuration list for PBXNativeTarget "XPWebView" */;
+			buildConfigurationList = 0ACE34B01D11571C00A9BB82 /* Build configuration list for PBXNativeTarget "XPWeb" */;
 			buildPhases = (
-				0AFB36071D0FE24B00B58EFD /* Sources */,
-				0AFB36081D0FE24B00B58EFD /* Frameworks */,
-				0AFB36091D0FE24B00B58EFD /* Headers */,
-				0AFB360A1D0FE24B00B58EFD /* Resources */,
+				0ACE34971D11571B00A9BB82 /* Sources */,
+				0ACE34981D11571B00A9BB82 /* Frameworks */,
+				0ACE34991D11571B00A9BB82 /* Headers */,
+				0ACE349A1D11571B00A9BB82 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = XPWebView;
-			productName = XPWebView;
-			productReference = 0AFB360C1D0FE24B00B58EFD /* XPWebView.framework */;
+			name = XPWeb;
+			productName = XPWeb;
+			productReference = 0ACE349C1D11571B00A9BB82 /* XPWeb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0AFB36151D0FE24B00B58EFD /* XPWebViewTests */ = {
+		0ACE34A51D11571C00A9BB82 /* XPWebTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AFB36231D0FE24B00B58EFD /* Build configuration list for PBXNativeTarget "XPWebViewTests" */;
+			buildConfigurationList = 0ACE34B31D11571C00A9BB82 /* Build configuration list for PBXNativeTarget "XPWebTests" */;
 			buildPhases = (
-				0AFB36121D0FE24B00B58EFD /* Sources */,
-				0AFB36131D0FE24B00B58EFD /* Frameworks */,
-				0AFB36141D0FE24B00B58EFD /* Resources */,
+				0ACE34A21D11571C00A9BB82 /* Sources */,
+				0ACE34A31D11571C00A9BB82 /* Frameworks */,
+				0ACE34A41D11571C00A9BB82 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0AFB36191D0FE24B00B58EFD /* PBXTargetDependency */,
+				0ACE34A91D11571C00A9BB82 /* PBXTargetDependency */,
 			);
-			name = XPWebViewTests;
-			productName = XPWebViewTests;
-			productReference = 0AFB36161D0FE24B00B58EFD /* XPWebViewTests.xctest */;
+			name = XPWebTests;
+			productName = XPWebTests;
+			productReference = 0ACE34A61D11571C00A9BB82 /* XPWebTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0AFB36031D0FE24B00B58EFD /* Project object */ = {
+		0ACE34931D11571B00A9BB82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = jy;
 				TargetAttributes = {
-					0AFB360B1D0FE24B00B58EFD = {
+					0ACE349B1D11571B00A9BB82 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					0AFB36151D0FE24B00B58EFD = {
+					0ACE34A51D11571C00A9BB82 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 0AFB36061D0FE24B00B58EFD /* Build configuration list for PBXProject "XPWebView" */;
+			buildConfigurationList = 0ACE34961D11571B00A9BB82 /* Build configuration list for PBXProject "XPWeb" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0AFB36021D0FE24B00B58EFD;
-			productRefGroup = 0AFB360D1D0FE24B00B58EFD /* Products */;
+			mainGroup = 0ACE34921D11571B00A9BB82;
+			productRefGroup = 0ACE349D1D11571B00A9BB82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AFB360B1D0FE24B00B58EFD /* XPWebView */,
-				0AFB36151D0FE24B00B58EFD /* XPWebViewTests */,
+				0ACE349B1D11571B00A9BB82 /* XPWeb */,
+				0ACE34A51D11571C00A9BB82 /* XPWebTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0AFB360A1D0FE24B00B58EFD /* Resources */ = {
+		0ACE349A1D11571B00A9BB82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AFB36141D0FE24B00B58EFD /* Resources */ = {
+		0ACE34A41D11571C00A9BB82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,34 +193,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0AFB36071D0FE24B00B58EFD /* Sources */ = {
+		0ACE34971D11571B00A9BB82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFB36291D0FE29400B58EFD /* XPWebView.swift in Sources */,
+				0ACE34B71D11573F00A9BB82 /* XPWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AFB36121D0FE24B00B58EFD /* Sources */ = {
+		0ACE34A21D11571C00A9BB82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFB361C1D0FE24B00B58EFD /* XPWebViewTests.swift in Sources */,
+				0ACE34AC1D11571C00A9BB82 /* XPWebTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0AFB36191D0FE24B00B58EFD /* PBXTargetDependency */ = {
+		0ACE34A91D11571C00A9BB82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AFB360B1D0FE24B00B58EFD /* XPWebView */;
-			targetProxy = 0AFB36181D0FE24B00B58EFD /* PBXContainerItemProxy */;
+			target = 0ACE349B1D11571B00A9BB82 /* XPWeb */;
+			targetProxy = 0ACE34A81D11571C00A9BB82 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0AFB361E1D0FE24B00B58EFD /* Debug */ = {
+		0ACE34AE1D11571C00A9BB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +269,7 @@
 			};
 			name = Debug;
 		};
-		0AFB361F1D0FE24B00B58EFD /* Release */ = {
+		0ACE34AF1D11571C00A9BB82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -307,7 +311,7 @@
 			};
 			name = Release;
 		};
-		0AFB36211D0FE24B00B58EFD /* Debug */ = {
+		0ACE34B11D11571C00A9BB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -315,17 +319,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = XPWebView/Info.plist;
+				INFOPLIST_FILE = XPWeb/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iiseeuu.jy.xpwebview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		0AFB36221D0FE24B00B58EFD /* Release */ = {
+		0ACE34B21D11571C00A9BB82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -333,31 +337,31 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = XPWebView/Info.plist;
+				INFOPLIST_FILE = XPWeb/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iiseeuu.jy.xpwebview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		0AFB36241D0FE24B00B58EFD /* Debug */ = {
+		0ACE34B41D11571C00A9BB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = XPWebViewTests/Info.plist;
+				INFOPLIST_FILE = XPWebTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		0AFB36251D0FE24B00B58EFD /* Release */ = {
+		0ACE34B51D11571C00A9BB82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = XPWebViewTests/Info.plist;
+				INFOPLIST_FILE = XPWebTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -365,32 +369,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AFB36061D0FE24B00B58EFD /* Build configuration list for PBXProject "XPWebView" */ = {
+		0ACE34961D11571B00A9BB82 /* Build configuration list for PBXProject "XPWeb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AFB361E1D0FE24B00B58EFD /* Debug */,
-				0AFB361F1D0FE24B00B58EFD /* Release */,
+				0ACE34AE1D11571C00A9BB82 /* Debug */,
+				0ACE34AF1D11571C00A9BB82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AFB36201D0FE24B00B58EFD /* Build configuration list for PBXNativeTarget "XPWebView" */ = {
+		0ACE34B01D11571C00A9BB82 /* Build configuration list for PBXNativeTarget "XPWeb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AFB36211D0FE24B00B58EFD /* Debug */,
-				0AFB36221D0FE24B00B58EFD /* Release */,
+				0ACE34B11D11571C00A9BB82 /* Debug */,
+				0ACE34B21D11571C00A9BB82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		0AFB36231D0FE24B00B58EFD /* Build configuration list for PBXNativeTarget "XPWebViewTests" */ = {
+		0ACE34B31D11571C00A9BB82 /* Build configuration list for PBXNativeTarget "XPWebTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AFB36241D0FE24B00B58EFD /* Debug */,
-				0AFB36251D0FE24B00B58EFD /* Release */,
+				0ACE34B41D11571C00A9BB82 /* Debug */,
+				0ACE34B51D11571C00A9BB82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0AFB36031D0FE24B00B58EFD /* Project object */;
+	rootObject = 0ACE34931D11571B00A9BB82 /* Project object */;
 }
