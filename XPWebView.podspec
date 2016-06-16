@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "jiny" => "625059135@qq.com" }
   s.platform     = :ios
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/jinye19910223/XPWebView.git", :tag => "1.0.5"}
+  s.source       = { :git => "https://github.com/jinye19910223/XPWebView.git", :tag => "1.0.7"}
   s.source_files  = "XPWebViewFramework/XPWebView/*.{h,swift}"
   s.framework  = "UIKit"
 end
