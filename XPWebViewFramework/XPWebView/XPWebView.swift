@@ -64,7 +64,10 @@ public class XPWebView: UIWebView {
             sourceLabel = UILabel(frame: CGRect(x: 0, y: 10, width: UIScreen.mainScreen().bounds.size.width, height: 15))
             let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: false)
             let item = components?.host
-            assert(item == nil,"url格式不正确")
+            if item == nil {
+                print("url格式不正确")
+                return
+            }
             sourceLabel?.text = ("网页由 \((url!.host)!) 提供")
             sourceLabel?.font = UIFont.systemFontOfSize(12)
             sourceLabel?.textColor = UIColor.whiteColor()
