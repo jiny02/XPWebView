@@ -1,15 +1,15 @@
 //
-//  XPWebTests.swift
-//  XPWebTests
+//  XPWebViewTests.swift
+//  XPWebViewTests
 //
-//  Created by jy on 16/6/15.
+//  Created by jy on 16/6/16.
 //  Copyright © 2016年 jy. All rights reserved.
 //
 
 import XCTest
-@testable import XPWeb
+@testable import XPWebView
 
-class XPWebTests: XCTestCase {
+class XPWebViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

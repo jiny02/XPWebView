@@ -64,7 +64,7 @@ public class XPWebView: UIWebView {
             sourceLabel = UILabel(frame: CGRect(x: 0, y: 10, width: UIScreen.mainScreen().bounds.size.width, height: 15))
             let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: false)
             let item = components?.host
-            assert(item == nil,"remoteUrl格式不正确")
+            assert(item == nil,"url格式不正确")
             sourceLabel?.text = ("网页由 \((url!.host)!) 提供")
             sourceLabel?.font = UIFont.systemFontOfSize(12)
             sourceLabel?.textColor = UIColor.whiteColor()
@@ -158,7 +158,7 @@ extension XPWebView{
 }
 
 extension XPWebView:UIWebViewDelegate{
-    public func webViewDidStartLoad(webView: UIWebView) {
+     public func webViewDidStartLoad(webView: UIWebView) {
         if (webViewProxyDelegate != nil) && (webViewProxyDelegate?.webViewDidStartLoad!(webView) != nil) {
             webViewProxyDelegate?.webViewDidStartLoad!(webView)
         }

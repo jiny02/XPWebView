@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ACE349B1D11571B00A9BB82"
-               BuildableName = "XPWeb.framework"
-               BlueprintName = "XPWeb"
-               ReferencedContainer = "container:XPWeb.xcodeproj">
+               BlueprintIdentifier = "0A94DAAF1D1245BB008B87DF"
+               BuildableName = "XPWebView.framework"
+               BlueprintName = "XPWebView"
+               ReferencedContainer = "container:XPWebViewFramework.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ACE34A51D11571C00A9BB82"
-               BuildableName = "XPWebTests.xctest"
-               BlueprintName = "XPWebTests"
-               ReferencedContainer = "container:XPWeb.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0ACE349B1D11571B00A9BB82"
-            BuildableName = "XPWeb.framework"
-            BlueprintName = "XPWeb"
-            ReferencedContainer = "container:XPWeb.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0ACE349B1D11571B00A9BB82"
-            BuildableName = "XPWeb.framework"
-            BlueprintName = "XPWeb"
-            ReferencedContainer = "container:XPWeb.xcodeproj">
+            BlueprintIdentifier = "0A94DAAF1D1245BB008B87DF"
+            BuildableName = "XPWebView.framework"
+            BlueprintName = "XPWebView"
+            ReferencedContainer = "container:XPWebViewFramework.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0ACE349B1D11571B00A9BB82"
-            BuildableName = "XPWeb.framework"
-            BlueprintName = "XPWeb"
-            ReferencedContainer = "container:XPWeb.xcodeproj">
+            BlueprintIdentifier = "0A94DAAF1D1245BB008B87DF"
+            BuildableName = "XPWebView.framework"
+            BlueprintName = "XPWebView"
+            ReferencedContainer = "container:XPWebViewFramework.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

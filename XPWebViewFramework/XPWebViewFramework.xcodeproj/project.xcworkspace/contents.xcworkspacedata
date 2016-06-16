@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:XPWeb.xcodeproj">
+      location = "self:XPWebViewFramework.xcodeproj">
    </FileRef>
 </Workspace>
