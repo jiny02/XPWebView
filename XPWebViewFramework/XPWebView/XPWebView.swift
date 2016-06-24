@@ -47,7 +47,7 @@ extension XPWebView{
     }
 }
 
-public class XPWebView: UIWebView {
+@IBDesignable public class XPWebView: UIWebView {
     var sourceLabel:UILabel?
     var progressView:UIProgressView?
     var maxLoadCount:Double! = 0
@@ -55,7 +55,7 @@ public class XPWebView: UIWebView {
     var currentUrl:NSURL?
     var interactive:Bool! = false
     var webViewProxyDelegate:WebViewProxyDelegate?
-    public var remoteUrl:String?{
+   @IBInspectable public var  remoteUrl:String?{
         willSet(newremoteUrl) {
             let urlEncode = newremoteUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let url = NSURL(string:urlEncode!)

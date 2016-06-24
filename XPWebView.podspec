@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XPWebView"
-  s.version      = "1.0.5"
+  s.version      = "1.0.7"
   s.summary      = "用于uiwebview的进度条显示和网页来源显示"
   s.homepage     = "https://github.com/jinye19910223/XPWebView.git"
   s.license      = "MIT"
