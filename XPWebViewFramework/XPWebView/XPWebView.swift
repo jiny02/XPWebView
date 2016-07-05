@@ -27,21 +27,21 @@
 import UIKit
 
 @objc public protocol WebViewProxyDelegate {
-    optional func webViewDidFinishLoad(webView: UIWebView)
-    optional func webViewDidStartLoad(webView: UIWebView)
-    optional func webView(webView: UIWebView, didFailLoadWithError error: NSError?)
-    optional func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool
+    @objc optional func webViewDidFinishLoad(_ webView: UIWebView)
+    @objc optional func webViewDidStartLoad(_ webView: UIWebView)
+    @objc optional func webView(_ webView: UIWebView, didFailLoadWithError error: NSError?)
+    @objc optional func webView(_ webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool
 }
 
 extension XPWebView{
     func belongViewController() -> UIViewController? {
-        var responder:UIResponder? = self.nextResponder()
+        var responder:UIResponder? = self.next()
         while (responder != nil) {
-            if ((responder?.isKindOfClass(UIViewController)) == true) {
+            if responder is UIViewController {
                 let currentVC:UIViewController = (responder! as!UIViewController)
                 return currentVC
             }
-            responder = responder?.nextResponder()
+            responder = responder?.next()
         }
         return nil
     }
@@ -57,24 +57,24 @@ extension XPWebView{
     var webViewProxyDelegate:WebViewProxyDelegate?
    @IBInspectable public var  remoteUrl:String?{
         willSet(newremoteUrl) {
-            let urlEncode = newremoteUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-            let url = NSURL(string:urlEncode!)
-            let urlRequest:NSURLRequest! = NSURLRequest(URL: url!)
-            self.loadRequest(urlRequest!)
-            sourceLabel = UILabel(frame: CGRect(x: 0, y: 10, width: UIScreen.mainScreen().bounds.size.width, height: 15))
-            let components = NSURLComponents(URL: url!, resolvingAgainstBaseURL: false)
+            let urlEncode = newremoteUrl?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed())
+            let url = URL(string:urlEncode!)
+            let urlRequest:URLRequest! = URLRequest(url: url!)
+            self.loadRequest(urlRequest! as URLRequest)
+            sourceLabel = UILabel(frame: CGRect(x: 0, y: 10, width: UIScreen.main().bounds.size.width, height: 15))
+            let components = URLComponents(url: url!, resolvingAgainstBaseURL: false)
             let item = components?.host
             if item == nil {
                 print("url格式不正确")
                 return
             }
             sourceLabel?.text = ("网页由 \((url!.host)!) 提供")
-            sourceLabel?.font = UIFont.systemFontOfSize(12)
-            sourceLabel?.textColor = UIColor.whiteColor()
-            sourceLabel?.textAlignment = NSTextAlignment.Center
+            sourceLabel?.font = .systemFont(ofSize: 12)
+            sourceLabel?.textColor = .white()
+            sourceLabel?.textAlignment = .center
             if sourceLabel?.superview == nil {
                 self.scrollView.addSubview(sourceLabel!)
-                self.scrollView.sendSubviewToBack(sourceLabel!)
+                self.scrollView.sendSubview(toBack: sourceLabel!)
             }
         }
     }
@@ -88,11 +88,11 @@ extension XPWebView{
     
     // MARK: 网页是否加载完成
     func loadComplete(webView:UIWebView) -> Bool {
-        let readyState:String! = webView.stringByEvaluatingJavaScriptFromString("document.readyState")!
+        let readyState:String! = webView.stringByEvaluatingJavaScript(from: "document.readyState")!
         if readyState == "interactive" {
             interactive = true
             let waitForCompleteJS:String = "window.addEventListener('load',function() { var iframe = document.createElement('iframe'); iframe.style.display = 'none'; iframe.src = 'webviewprogressproxy:///complete'; document.body.appendChild(iframe);  }, false);"
-            webView.stringByEvaluatingJavaScriptFromString(waitForCompleteJS)
+            webView.stringByEvaluatingJavaScript(from: waitForCompleteJS)
         }
         if (readyState == "complete") && (currentUrl != nil) && (currentUrl == webView.request?.mainDocumentURL) {
             self.completeProgress()
@@ -115,17 +115,17 @@ extension XPWebView{
         let increment:Float = (maxProgress! - progress)*remainPercent
         progress += increment
         progress = fmin(progress, maxProgress!)
-        if progress >= progressView?.progress {
+        if progress >= (progressView?.progress)! {
             progressView?.setProgress(progress, animated: true)
         }
     }
     
     // MARK: 加载完成后
     func completeProgress() {
-        if progressView?.hidden == true {
+        if progressView?.isHidden == true {
             return
         }
-        NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: #selector(self.hiddenProgressView), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.hiddenProgressView), userInfo: nil, repeats: false)
     }
     
     // MARK: 重定向后重置进度
@@ -133,25 +133,25 @@ extension XPWebView{
         maxLoadCount = 0
         loadingCount = 0
         interactive = false
-        progressView?.hidden = false
+        progressView?.isHidden = false
         progressView?.progress = 0.1
     }
     
     func hiddenProgressView() {
-        progressView?.hidden = true
+        progressView?.isHidden = true
     }
     
     func updateProgressFrame() {
         if self.belongViewController()?.automaticallyAdjustsScrollViewInsets == true {
-            progressView?.frame = CGRectMake(0, 64, UIScreen.mainScreen().bounds.size.width, 2)
+            progressView?.frame = CGRect(x: 0, y: 64, width: UIScreen.main().bounds.size.width, height: 2)
         }else{
-            progressView?.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 2)
+            progressView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main().bounds.size.width, height: 2)
         }
     }
 }
 
 extension XPWebView{
-    override public func scrollViewDidScroll(scrollView: UIScrollView) {
+    override public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if sourceLabel != nil {
             var headFrame:CGRect! = sourceLabel?.frame
             headFrame.origin.y = scrollView.contentOffset.y + 10 + 64
@@ -161,38 +161,43 @@ extension XPWebView{
 }
 
 extension XPWebView:UIWebViewDelegate{
-     public func webViewDidStartLoad(webView: UIWebView) {
+    public func webViewDidStartLoad(_ webView: UIWebView) {
         if (webViewProxyDelegate != nil) && (webViewProxyDelegate?.webViewDidStartLoad!(webView) != nil) {
             webViewProxyDelegate?.webViewDidStartLoad!(webView)
         }
         loadingCount! += 1
         maxLoadCount = fmax(maxLoadCount, loadingCount)
-        if progressView?.progress <= 0.1 {
+        if (progressView?.progress)! <= 0.1 {
             progressView?.setProgress(0.1, animated: true)
         }
     }
     
-     public func webViewDidFinishLoad(webView: UIWebView) {
+    public func webViewDidFinishLoad(_ webView: UIWebView) {
         if (webViewProxyDelegate != nil) && (webViewProxyDelegate?.webViewDidFinishLoad!(webView) != nil) {
             webViewProxyDelegate?.webViewDidFinishLoad!(webView)
         }
         loadingCount! -= 1
-        self.incrementProgress()
-        self.loadComplete(webView)
+        incrementProgress()
+        let _ = loadComplete(webView: webView)
     }
     
-    public func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    public func webView(_ webView: UIWebView, didFailLoadWithError error: NSError?) {
         if (webViewProxyDelegate != nil) && (webViewProxyDelegate?.webView!(webView, didFailLoadWithError: error) != nil) {
             webViewProxyDelegate?.webView!(webView, didFailLoadWithError: error)
         }
         loadingCount! -= 1
         self.incrementProgress()
-        self.loadComplete(webView)
+        let _ = self.loadComplete(webView: webView)
     }
     
-    public func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if request.url?.host != nil{
+            if sourceLabel != nil {
+                sourceLabel?.text = ("网页由 \((request.url?.host)!) 提供")
+            }
+        }
         self.updateProgressFrame()
-        if (request.URL?.absoluteString == "webviewprogressproxy:///complete") {
+        if (request.url?.absoluteString == "webviewprogressproxy:///complete") {
             self.completeProgress()
             return false
         }
@@ -201,14 +206,14 @@ extension XPWebView:UIWebViewDelegate{
             ret = webViewProxyDelegate?.webView!(webView, shouldStartLoadWithRequest: request, navigationType: navigationType)
         }
         var isFragmentJump:Bool! = false
-        if request.URL?.fragment != nil {
-            let nonFragmentUrl:String = (request.URL?.absoluteString.stringByReplacingOccurrencesOfString("#".stringByAppendingString((request.URL?.fragment)!), withString:""))!
-            isFragmentJump = (nonFragmentUrl == webView.request?.URL?.absoluteString)
+        if request.url?.fragment != nil {
+            let nonFragmentUrl:String = (request.url?.absoluteString?.replacingOccurrences(of: "#".appending((request.url?.fragment)!), with: ""))!
+            isFragmentJump = (nonFragmentUrl == webView.request?.url?.absoluteString)
         }
-        let isTopLevelNavigation:Bool! = (request.mainDocumentURL == request.URL)
-        let isHTTP:Bool = ((request.URL!.scheme == "http") || (request.URL?.scheme == "https"))
+        let isTopLevelNavigation:Bool! = (request.mainDocumentURL == request.url)
+        let isHTTP:Bool = ((request.url!.scheme == "http") || (request.url?.scheme == "https"))
         if ((ret == true) && (isFragmentJump == false) && (isHTTP == true) && (isTopLevelNavigation == true)) {
-            currentUrl = request.URL
+            currentUrl = request.url
             self.resetProgress()
         }
         return ret

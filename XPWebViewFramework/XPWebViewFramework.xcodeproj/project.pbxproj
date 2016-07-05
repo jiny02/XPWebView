@@ -325,25 +325,34 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = jy;
 				TargetAttributes = {
 					0A94DA791D124576008B87DF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3824G596RL;
+						DevelopmentTeamName = "烨 金 (Personal Team)";
+						LastSwiftMigration = 0800;
 					};
 					0A94DA8D1D124577008B87DF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0A94DA791D124576008B87DF;
 					};
 					0A94DA981D124577008B87DF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0A94DA791D124576008B87DF;
 					};
 					0A94DAAF1D1245BB008B87DF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3824G596RL;
+						DevelopmentTeamName = "烨 金 (Personal Team)";
+						LastSwiftMigration = 0800;
 					};
 					0A94DAB81D1245BB008B87DF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0A94DA791D124576008B87DF;
 					};
 				};
@@ -589,26 +598,29 @@
 		0A94DAA31D124577008B87DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = XPWebViewFramework/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iiseeuu.xpwebviewframework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0A94DAA41D124577008B87DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = XPWebViewFramework/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iiseeuu.xpwebviewframework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -620,6 +632,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XPWebViewFramework.app/XPWebViewFramework";
 			};
 			name = Debug;
@@ -632,6 +645,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XPWebViewFramework.app/XPWebViewFramework";
 			};
 			name = Release;
@@ -643,6 +658,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewFrameworkUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = XPWebViewFramework;
 			};
 			name = Debug;
@@ -654,6 +670,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewFrameworkUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = XPWebViewFramework;
 			};
 			name = Release;
@@ -675,6 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -697,6 +716,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iiseeuu.xpwebview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -711,6 +732,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XPWebViewFramework.app/XPWebViewFramework";
 			};
 			name = Debug;
@@ -723,6 +745,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.jy.XPWebViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XPWebViewFramework.app/XPWebViewFramework";
 			};
 			name = Release;
@@ -746,6 +770,7 @@
 				0A94DAA41D124577008B87DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A94DAA51D124577008B87DF /* Build configuration list for PBXNativeTarget "XPWebViewFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +779,7 @@
 				0A94DAA71D124577008B87DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A94DAA81D124577008B87DF /* Build configuration list for PBXNativeTarget "XPWebViewFrameworkUITests" */ = {
 			isa = XCConfigurationList;
@@ -762,6 +788,7 @@
 				0A94DAAA1D124577008B87DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A94DAC71D1245BC008B87DF /* Build configuration list for PBXNativeTarget "XPWebView" */ = {
 			isa = XCConfigurationList;
@@ -770,6 +797,7 @@
 				0A94DAC91D1245BC008B87DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A94DACB1D1245BC008B87DF /* Build configuration list for PBXNativeTarget "XPWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -778,6 +806,7 @@
 				0A94DACD1D1245BC008B87DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
